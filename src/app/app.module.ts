@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CorouselComponent } from './corousel/corousel.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
+import { DetailCardComponent } from './detail-card/detail-card.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,22 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     CorouselComponent,
     CardComponent,
-    FooterComponent
+    FooterComponent,
+    DetailCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
     MDBBootstrapModule.forRoot()
   ],
+  entryComponents: [
+    AppComponent,
+    CardComponent,
+    NavbarComponent,
+    FooterComponent,
+    CardComponent,
+    DetailCardComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

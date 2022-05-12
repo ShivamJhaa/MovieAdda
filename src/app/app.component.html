@@ -1,9 +1,10 @@
 <app-navbar></app-navbar>
 <app-corousel></app-corousel>
-<div class="heading text-center p-3">Explore Trending movies/shows</div>
+<div class="heading text-center p-3">Explore Trending Movies</div>
 <div id="container">
     <div id="inner">
-      <app-card class="child" *ngFor="let i of movie"></app-card>
+      <app-card class="child" *ngFor="let i of movie" [movieIndex]="i"></app-card>
     </div>
 </div>
 <app-footer></app-footer>
+<router-outlet></router-outlet>

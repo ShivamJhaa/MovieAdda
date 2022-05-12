@@ -1,0 +1,8 @@
+.carousel>.inner>.view>img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    line-height: 1;
+    margin:auto;
+    width: 100%;
+    }
