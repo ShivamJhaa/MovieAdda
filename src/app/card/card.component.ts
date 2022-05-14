@@ -29,6 +29,7 @@ export class CardComponent implements OnInit {
     const modal = this.modalService.open(DetailCardComponent, 
       {size: 'lg', centered:true});
     modal.componentInstance.movies = this.movies;
+    modal.componentInstance.movieIndex = this.movieIndex;
   }
 
   ngOnInit(): void {

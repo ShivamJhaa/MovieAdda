@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ServiceService } from '../service/service.service';
 
 @Component({
@@ -8,10 +9,16 @@ import { ServiceService } from '../service/service.service';
 })
 export class MovePageComponent implements OnInit {
   movies: any;
+  movieIndex: any;
+  trailerLink!: string;
 
-  constructor(private movieService: ServiceService) { }
+  constructor(private route: ActivatedRoute,
+    private movieService: ServiceService) { }
 
   ngOnInit(): void {
+    this.movieIndex = JSON.parse(this.route.snapshot.paramMap.get('movieIndex') as string);
+    this.movieService.getMovie(this.movieIndex).subscribe((data) => {
+      this.movies = data[0];
+    })
   }
-
 }
