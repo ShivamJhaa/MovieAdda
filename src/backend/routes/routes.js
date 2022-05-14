@@ -14,7 +14,6 @@ router.get("/fetchmovies", async (req, res) => {
 });
 router.get("/movies/:id", async (req, res) => {
   try {
-      console.log(req.params.id);
     const movies = await Movies.find({ id: req.params.id });
     res.json(movies);
   } catch (error) {

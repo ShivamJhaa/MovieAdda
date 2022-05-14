@@ -1,6 +1,6 @@
-<div class="movie" (click)="gotoMoviePage()" >
-    <div class="movie__hero" routerLink="/movie-page">
-      <img style="width: 100%; height:100%;" src="{{movies.posterLink}}" alt="Rambo" class="movie__img">
+<div class="movie">
+    <div class="movie__hero">
+      <img (click)="gotoMoviePage()" style="width: 100%; height:100%;" src="{{movies.posterLink}}" alt="Rambo" class="movie__img">
     </div>
     <div class="movie__content">
       <div class="movie__title">
