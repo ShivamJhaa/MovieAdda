@@ -7,6 +7,7 @@ let MoviesSchema = new Schema({
   name: {
     type: String,
   },
+  genres:[String],
   posterLink: {
     type: String,
   },
@@ -25,6 +26,7 @@ let MoviesSchema = new Schema({
   duration: {
     type: String,
   },
+  actors: [String]
 });
 
-module.exports = mongoose.model("movies", MoviesSchema);
+module.exports = mongoose.model("movie", MoviesSchema);

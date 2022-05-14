@@ -10,7 +10,7 @@
   <div class="shine"></div>
   <div class="text-block">
      <h1>{{movies.name}}</h1>
-     <h3>Action, Adventure, Sci-Fi</h3>
+     <h3>{{movies.genres[0]}} {{movies.genres[1]}} {{movies.genres[2]}}</h3>
      <br>
      Release : {{movies.release}}<br>
      Rating : {{movies.rating}}<br>
@@ -20,5 +20,10 @@
      <p>
       {{movies.description}}
      </p>
+     <br>
+     <h3>Cast</h3>
+     <h5>
+      {{movies.actors[0]}} {{movies.actors[1]}} {{movies.actors[2]}}
+     </h5>
   </div>
 </div>

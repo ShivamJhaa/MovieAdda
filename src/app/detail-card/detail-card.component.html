@@ -5,20 +5,19 @@
     <div class="movie__content">
       <div class="movie__title">
         <h1 class="heading__primary">{{movies.name}}<i class="fas fa-fire"></i></h1>
-        <div class="movie__tag movie__tag--1">#action</div>
-        <div class="movie__tag movie__tag--2">#thriller</div>
+        <div class="movie__tag movie__tag--1">{{movies.genres[0]}}</div>
+        <div class="movie__tag movie__tag--2">{{movies.genres[1]}}</div>
       </div>
       <p class="movie__description">
         {{movies.description}}
       </p>
       <div class="movie__details">
-        <p class="movie__detail"><span class="icons icons-red"><i class="fas fa-camera-retro"></i> </span>Buzz
-          Feitshans</p>
+        <p class="movie__detail"><span class="icons icons-red"><i class="fas fa-camera-retro"></i> </span>{{movies.actors[0]}} </p>
         <p class="movie__detail"><span class="icons icons-grey"><i class="fas fa-clock"></i> </span>{{movies.duration}}</p>
         <p class="movie__detail"><span class="icons icons-yellow"><i class="fas fa-file-invoice-dollar"></i>
-          </span>$12.52 crores</p>
+          </span>{{movies.rating}}</p>
       </div>
       <button type="button" (click)="cancel()" style="width: 40%; margin-left: 50%;" class="btn btn-outline-danger" data-mdb-ripple-color="dark">Close</button>
     </div>
-    <div class="movie__price">$12.56</div>
+    <div class="movie__price">{{movies.rating}}</div>
   </div>

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  movie = [1,2,3,4,5,6,7,8]
+  movie = [20,21,22,23,24,25,26,27]
   constructor() { }
 
   ngOnInit(): void {
