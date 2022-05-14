@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -8,10 +7,9 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./detail-card.component.css']
 })
 export class DetailCardComponent implements OnInit {
-  @Input() index!: number;
+  @Input() movies!: any;
 
-  constructor(private ngbActiveModal: NgbActiveModal,
-    private router: Router) { }
+  constructor(private ngbActiveModal: NgbActiveModal) { }
 
   cancel(): void {
     this.ngbActiveModal.dismiss('cancel');

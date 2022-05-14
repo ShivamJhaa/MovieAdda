@@ -1,0 +1,24 @@
+*{
+    background-color: black;
+  }
+  #container {
+      overflow: hidden;
+      width: 100%;
+  }
+    
+  #inner {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .child {
+    padding: 2%;
+    float: left;
+  }
+  
+  .heading {
+      background-color: black;
+      color: #fff;
+      font-size: 2.5rem;
+  }
+  

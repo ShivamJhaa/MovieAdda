@@ -7,6 +7,7 @@ import { Movies } from './movies';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ServiceService {
   REST_API: string = 'http://localhost:8000/api';
  
@@ -14,8 +15,8 @@ export class ServiceService {
  
   constructor(private httpClient: HttpClient) { }
 
-  GetMovie(id:any): Observable<any> {
-    let API_URL = `${this.REST_API}/movies/${id}`;
+  getMovie(id:any) {
+    let API_URL = `${this.REST_API}/movies/movies/${id}`;
     return this.httpClient.get(API_URL, { headers: this.httpHeaders })
       .pipe(map((res: any) => {
           return res || {}

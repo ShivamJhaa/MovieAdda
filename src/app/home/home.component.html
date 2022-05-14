@@ -1,0 +1,7 @@
+<app-corousel></app-corousel>
+<div class="heading text-center p-3">Explore Trending Movies</div>
+<div id="container">
+    <div id="inner">
+      <app-card class="child" *ngFor="let i of movie" [movieIndex]="i"></app-card>
+    </div>
+</div>

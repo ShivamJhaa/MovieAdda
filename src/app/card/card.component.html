@@ -2,11 +2,11 @@
 
 <div class="card" (click)="openNewCard()">
   <a href="#">
-    <div class="img1"></div>
-    <div class="img2"></div>
-    <div class="title">VIKINGS series Season 1 || Epsoide 1</div>
-    <div class="text">Now You can watch the first epsoide of the action series Vikings , wish you interesting watch</div>
-    <a href="#"><div class="catagory">Series <i        class="fas fa-film"></i></div></a>
-    <a href="#"><div class="views">20211  <i class="far fa-eye"></i> </div></a>
+    <div class="img1" [style.background-image]="'url(\'' + movies.posterLink + '\')'" ></div>
+    <div class="img2" [style.background-image]="'url(\'' + movies.posterLink + '\')'" ></div>
+    <div class="title">{{movies.name}}</div>
+    <div class="text">{{movies.description}}</div>
+    <a href="#"><div class="catagory">Movie <i class="fas fa-film"></i></div></a>
+    <a href="#"><div class="views">Rating: {{movies.rating}}</div></a>
   </a>
 </div>
