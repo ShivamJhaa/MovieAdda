@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
-// const fetchuser = require("../middleware/fetchuser");
 const Movies = require("../model/movies");
-// const { body, validationResult } = require("express-validator");
+
 router.get("/fetchmovies", async (req, res) => {
   try {
     const movies = await Movies.find();
@@ -12,6 +11,7 @@ router.get("/fetchmovies", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+
 router.get("/movies/:id", async (req, res) => {
   try {
     const movies = await Movies.find({ id: req.params.id });
@@ -21,6 +21,7 @@ router.get("/movies/:id", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+
 router.post("/addmovies", async (req, res) => {
   try {
     const {
@@ -34,11 +35,6 @@ router.post("/addmovies", async (req, res) => {
       duration,
     } = req.body;
 
-    // If there are errors, return Bad request and the errors
-    // const errors = validationResult(req);
-    // if (!errors.isEmpty()) {
-    //   return res.status(400).json({ errors: errors.array() });
-    // }
     const movie = new Movies({
       id,
       name,
@@ -57,4 +53,5 @@ router.post("/addmovies", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+
 module.exports = router;
