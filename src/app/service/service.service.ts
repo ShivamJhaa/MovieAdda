@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Movies } from './movies';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +16,16 @@ export class ServiceService {
 
   getMovie(id:any) {
     let API_URL = `${this.REST_API}/movies/movies/${id}`;
+    return this.httpClient.get(API_URL, { headers: this.httpHeaders })
+      .pipe(map((res: any) => {
+          return res || {}
+        }),
+        catchError(this.handleError)
+      )
+  }
+
+  getAllMovie() {
+    let API_URL = `${this.REST_API}/movies/fetchmovies`;
     return this.httpClient.get(API_URL, { headers: this.httpHeaders })
       .pipe(map((res: any) => {
           return res || {}
