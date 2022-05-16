@@ -18,7 +18,7 @@ export class DetailCardComponent implements OnInit {
     this.ngbActiveModal.dismiss('cancel');
   }
 
-  gotoMoviePage() {
+  gotoMoviePage(): void {
     this.cancel();
     this.router.navigate(['/movie', {movieIndex: JSON.stringify(this.movieIndex)}]);
   }

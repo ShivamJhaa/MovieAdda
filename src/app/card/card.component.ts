@@ -35,7 +35,6 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
     this.movieService.getMovie(this.movieIndex).subscribe((data) => {
       this.movies = data[0];
-      console.log(data[0])
     })
   }
 }

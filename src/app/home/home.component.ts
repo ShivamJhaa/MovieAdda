@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   movie = [20,21,22,23,24,25,26,27]
+
   constructor() { }
 
   ngOnInit(): void {

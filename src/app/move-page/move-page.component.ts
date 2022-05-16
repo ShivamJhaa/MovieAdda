@@ -12,8 +12,10 @@ export class MovePageComponent implements OnInit {
   movieIndex: any;
   trailerLink!: string;
 
-  constructor(private route: ActivatedRoute,
-    private movieService: ServiceService) { }
+  constructor (
+    private route: ActivatedRoute,
+    private movieService: ServiceService
+  ) { }
 
   ngOnInit(): void {
     this.movieIndex = JSON.parse(this.route.snapshot.paramMap.get('movieIndex') as string);

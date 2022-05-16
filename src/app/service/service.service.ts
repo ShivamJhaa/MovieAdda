@@ -14,7 +14,7 @@ export class ServiceService {
  
   constructor(private httpClient: HttpClient) { }
 
-  getMovie(id:any) {
+  getMovie(id:any): Observable<any> {
     let API_URL = `${this.REST_API}/movies/movies/${id}`;
     return this.httpClient.get(API_URL, { headers: this.httpHeaders })
       .pipe(map((res: any) => {
@@ -24,7 +24,7 @@ export class ServiceService {
       )
   }
 
-  getAllMovie() {
+  getAllMovie(): Observable<any> {
     let API_URL = `${this.REST_API}/movies/fetchmovies`;
     return this.httpClient.get(API_URL, { headers: this.httpHeaders })
       .pipe(map((res: any) => {
@@ -34,7 +34,7 @@ export class ServiceService {
       )
   }
 
-  handleError(error: HttpErrorResponse) {
+  handleError(error: HttpErrorResponse): Observable<any> {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
       errorMessage = error.error.message;
